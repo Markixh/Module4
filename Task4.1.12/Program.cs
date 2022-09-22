@@ -1,4 +1,4 @@
-﻿namespace Task4._1._12
+﻿namespace Task4_1_12
 {
     internal class Program
     {
