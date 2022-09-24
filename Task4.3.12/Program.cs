@@ -5,24 +5,20 @@
         static void Main(string[] args)
         {
             var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-            int[] sortarr = new int[arr.Length];
-            int min = 100000;
-            int prev = 0;
-            for (int i = 0; i < arr.Length; i++)
+            for (int j = 0; j < arr.Length; j++)
             {
-                for (int j = 0; j < arr.Length; j++)
+                for (int i = 0; i < arr.Length - 1; i++)
                 {
-                    if ((arr[j] < min) && (arr[j] > prev))
+                    if (arr[i + 1] < arr[i])
                     {
-                        min = arr[j];
+                        var temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
                     }
                 }
-                sortarr[i] = min;
-                prev = min;
-                min = 100000;
             }
             for (int i = 0; i < arr.Length; i++)
-                Console.Write(sortarr[i]);
+                Console.Write(arr[i]);
             Console.ReadKey();
         }
     }
