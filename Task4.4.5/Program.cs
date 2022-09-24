@@ -1,6 +1,4 @@
-﻿using System.Xml.Linq;
-
-namespace Task4._4._5
+﻿namespace Task4_4_5
 {
     internal class Program
     {
