@@ -6,12 +6,15 @@ namespace Task4_4_2
     {
         static void Main(string[] args)
         {
-            (string name, byte age) anketa;
+            var (name, age) = ("Евгения", 27);
+            Console.WriteLine("Ваше имя: {0}", name);
+            Console.WriteLine("Ваш возраст: {0}", age);
+
             Console.Write("Введите ваше Имя: ");
-            anketa.name = Console.ReadLine();
+            name = Console.ReadLine();
             Console.Write("Введите ваш возраст: ");
-            anketa.age = checked((byte)int.Parse(Console.ReadLine()));
-            Console.WriteLine($"Ваше имя {anketa.name}, а возраст {anketa.age}");
+            age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine($"Ваше имя {name}, а возраст {age}");
             Console.ReadKey();
         }
     }
