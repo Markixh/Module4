@@ -1,4 +1,6 @@
-﻿namespace Module4
+﻿using System.Diagnostics.Metrics;
+
+namespace Module4
 {
     internal class Program
     {
@@ -12,6 +14,19 @@
             Console.WriteLine("Введите логин");
             User.Login = Console.ReadLine();
             User.LoginLength = User.Login.Length;
+            Console.WriteLine("Есть ли у вас животные? Да или Нет");
+            switch (Console.ReadLine())
+            {
+                case "Да":
+                case "да":
+                case "Yes":
+                case "yes":
+                    User.IfPet = true;
+                    break;
+                default:
+                    User.IfPet = false;
+                    break;
+            }            
         }
     }
 }
